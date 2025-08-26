@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clima</title>
+    <link rel="stylesheet" href="/frontEnd/css/styles.css" />
+</head>
+<body>
+    <main class="app">
+        <h1>Clima</h1>
+
+        <form id="search-form" class="search">
+        <input id="q" name="q" placeholder="Ciudad (ej. Madrid)" autocomplete="off" required />
+        <button>Buscar</button>
+        </form>
+
+        <section id="card" class="card hidden">
+        <h2 id="place"></h2>
+        <p id="desc" class="desc"></p>
+        <div class="row">
+            <div class="temp"><span id="temp">--</span>°<button id="unit" type="button">C</button></div>
+            <ul class="meta">
+            <li>Viento: <span id="wind">--</span> km/h</li>
+            <li>Humedad: <span id="humidity">--</span>%</li>
+            </ul>
+        </div>
+        <img id="icon" alt="" class="icon" />
+        </section>
+
+        <p id="msg" class="msg"></p>
+    </main>
+
+    <script src="/frontEnd/javaScript/app.js" defer></script>
+</body>
+</html>

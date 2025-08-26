@@ -1,0 +1,31 @@
+:root{
+    --bg:#0f1115; --fg:#e8e8ea; --muted:#9aa0a6; --card:#151922; --accent:#2f6bed;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font:16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--fg); background:radial-gradient(1200px 1200px at 10% -20%, #1d2230, transparent), var(--bg);}
+.app{max-width:680px; margin:4rem auto; padding:0 1rem}
+h1{margin:0 0 1rem}
+.search{display:flex; gap:.5rem; margin-bottom:1rem}
+.search input{flex:1; padding:.75rem 1rem; border-radius:.6rem; border:1px solid #2a2f3a; background:#0f131b; color:var(--fg)}
+.search button{padding:.75rem 1rem; border-radius:.6rem; border:0; background:var(--accent); color:#fff; cursor:pointer}
+.card{background:var(--card); border:1px solid #242a36; border-radius:1rem; padding:1rem; display:grid; gap:.75rem}
+.hidden{display:none}
+.row{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+.temp{font-size:3rem; font-weight:700}
+.temp button{margin-left:.4rem; font-size:1rem; background:#222836; color:var(--fg); border:1px solid #2f3644; border-radius:.4rem; padding:.1rem .4rem; cursor:pointer}
+.meta{list-style:none; padding:0; margin:0; color:var(--muted)}
+.desc{color:var(--muted); margin:.25rem 0 .5rem}
+.icon{width:90px; height:90px}
+.msg{margin-top:.5rem; min-height:1.2em; color:#ff6b6b}
+
+/* Fondos por condición (puedes ajustar colores/imgs) */
+.bg-clear    { background: radial-gradient(1000px 800px at 10% -20%, #1e2746, transparent), #0f1115; }
+.bg-cloudy   { background: radial-gradient(1000px 800px at 10% -20%, #2b2f3a, transparent), #0e1016; }
+.bg-rain     { background: radial-gradient(1000px 800px at 10% -20%, #1d2533, transparent), #0b0f14; }
+.bg-snow     { background: radial-gradient(1000px 800px at 10% -20%, #202734, transparent), #0b0e12; }
+.bg-fog      { background: radial-gradient(1000px 800px at 10% -20%, #22262e, transparent), #0c0f13; }
+.bg-storm    { background: radial-gradient(1000px 800px at 10% -20%, #241f33, transparent), #0b0c14; }
+
+/* transición suave al cambiar */
+body { transition: background 400ms ease; }
