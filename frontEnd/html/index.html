@@ -2,35 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Clima</title>
-    <link rel="stylesheet" href="/frontEnd/css/styles.css" />
+
+    <!-- Weather Icons (iconos de clima por clase CSS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" integrity="sha512-WUi9dG5xqv6P6A9p0b3Q4t50rNBCbx1f+8lq9ERoQH2rQfXxV4k3tJw3E6B0bYTbqW5PqUqf8+LZk3N0fY6C9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
     <main class="app">
         <h1>Clima</h1>
 
-        <form id="search-form" class="search">
-        <input id="q" name="q" placeholder="Ciudad (ej. Madrid)" autocomplete="off" required />
-        <button>Buscar</button>
+        <form id="search-form" class="search" autocomplete="off">
+        <input id="q" name="q" placeholder="Ciudad (ej. Mex, Paris, Tokyo)" />
+        <button type="submit">Buscar</button>
         </form>
 
-        <section id="card" class="card hidden">
-        <h2 id="place"></h2>
-        <p id="desc" class="desc"></p>
+        <p id="msg" class="msg"></p>
+
+        <section id="card" class="card hidden" aria-live="polite">
         <div class="row">
-            <div class="temp"><span id="temp">--</span>°<button id="unit" type="button">C</button></div>
+            <div>
+            <h2 id="place" class="place">—</h2>
+            <p id="desc" class="desc">—</p>
+            </div>
+            <div class="icon">
+            <i id="icon" class="wi"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="temp">
+            <span id="temp">0</span>°
+            <button id="unit" type="button" aria-label="Cambiar unidad">C</button>
+            </div>
             <ul class="meta">
-            <li>Viento: <span id="wind">--</span> km/h</li>
-            <li>Humedad: <span id="humidity">--</span>%</li>
+            <li>Viento: <strong id="wind">–</strong> km/h</li>
+            <li>Humedad: <strong id="humidity">–</strong>%</li>
             </ul>
         </div>
-        <img id="icon" alt="" class="icon" />
         </section>
-
-        <p id="msg" class="msg"></p>
     </main>
 
-    <script src="/frontEnd/javaScript/app.js" defer></script>
+    <script src="../javascript/app.js" defer></script>
 </body>
 </html>
+
